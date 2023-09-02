@@ -1,10 +1,108 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { validateData, validateName } from "../utils/validate";
 import Header from "./Header";
+import { auth } from "../utils/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isSignIn, setIsSignIn] = useState(true);
-
+  const [error, setError] = useState(null);
+  // const [name, setName] = useState(null);
+  // const [email, setEmail] = useState(null);
+  // const [password, setPassword] = useState(null);
+  const name = useRef(null);
+  const email = useRef(null);
+  const password = useRef(null);
   const toggleSignIn = () => {
     setIsSignIn(!isSignIn);
+  };
+
+  const handleValidation = () => {
+    if (isSignIn) {
+      const errorMessage = validateData(
+        email.current.value,
+        password.current.value
+      );
+      setError(errorMessage);
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+          // ...
+          //GOTO BROWSE PAGE
+          navigate("/browse");
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setError(errorCode + " - " + errorMessage);
+        });
+    } else {
+      const nameError = name.current ? validateName(name.current.value) : null;
+      const emailError = validateData(
+        email.current.value,
+        password.current.value
+      );
+      setError(nameError || emailError);
+
+      //create account -signup code  here
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/101958184?v=4",
+          })
+            .then(() => {
+              // Profile updated!
+              //Dispatch addUser  again
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              navigate("/browse");
+            })
+            .catch((error) => {
+              // An error occurred
+              setError(error.message);
+              console.log(error);
+            });
+
+          console.log(user);
+
+          // ...
+          //GOTO BROWSE PAGE
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setError(errorCode + " - " + errorMessage);
+          // ..
+        });
+    }
   };
 
   return (
@@ -17,7 +115,11 @@ const Login = () => {
         />
       </div>
 
-      <form className='absolute mx-auto md:my-[150px] right-0 left-0 rounded-xl text-white bg-black md:opacity-90  p-12 w-100  md:h-[85%] md:w-[32%]'>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className='absolute mx-auto md:my-[150px] right-0 left-0 md:rounded-xl text-white bg-black md:opacity-90  p-12 w-100  md:h-[85%] md:w-[32%]'>
         <div className='container flex items-center justify-center h-screen md:h-[95%]'>
           <div className='flex flex-col items-start w-full md:w-screen '>
             <p className='text-white font-semibold text-3xl mb-6'>
@@ -25,29 +127,36 @@ const Login = () => {
             </p>
             {isSignIn ? null : (
               <input
+                ref={name}
                 type='text'
                 className='px-4 py-3 mb-4 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
                 placeholder='Name'
               />
             )}
             <input
+              ref={email}
               type='text'
               className='px-4 py-3 mb-4 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
               placeholder='Email or phone number'
             />
             <input
+              ref={password}
               type='password'
               className='px-4 py-3 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
               placeholder='Password'
             />
-            <button className='px-4 py-2 mt-8 rounded-md mb-2 bg-brand-red text-white font-semibold w-full'>
+
+            <p className='text-red-500 font-semibold mt-2 text-lg'>{error}</p>
+
+            <button
+              onClick={handleValidation}
+              className='px-4 py-2 mt-8 rounded-md mb-2 bg-brand-red text-white font-semibold w-full'>
               {isSignIn ? "Sign In" : "Sign up"}
             </button>
 
             <p
               className='text-neutral-400 md: mt-7 cursor-pointer'
-              onClick={toggleSignIn}
-            >
+              onClick={toggleSignIn}>
               {isSignIn ? "New to Netflix?" : "Already registered"}{" "}
               <span className='text-white'>
                 {isSignIn ? "Sign Up now" : ""}{" "}
