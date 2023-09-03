@@ -4,7 +4,7 @@ import { Info } from 'lucide-react';
 // eslint-disable-next-line react/prop-types
 const VideoTitle = ({title,overview}) => {
   return <>
-<div className="pt-[12%] px-20 w-screen aspect-video mb-4 mt-[90px] absolute bg-gradient-to-r from-black ">
+<div className="pt-[12%] px-20 w-screen aspect-video   absolute bg-gradient-to-r from-black ">
 <h1 className="md:text-6xl text-5xl mb-3 font-semibold text-white ">{title}</h1>
 <p className="text-lg mb-4 text-white md:w-[50%]">{overview}</p>
 <div>

@@ -14,7 +14,7 @@ const HeroContainer = () => {
       <VideoTitle title={original_title} overview={overview}/>
       <VideoBackground movieId={id}/>
     </>
-  );
-};
+  )
+}
 
 export default HeroContainer;
