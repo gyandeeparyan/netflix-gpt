@@ -1,9 +1,31 @@
 import Header from "./Header";
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
+import HeroContainer from "./HeroContainer";
+import MoviesListContainer from "./MoviesListContainer";
 
 const Browse = () => {
-  return <>
-  <Header/>
-  </>;
+useNowPlayingMovies();
+
+
+
+
+  return (
+    <>
+      <Header />
+      <HeroContainer/>
+      <MoviesListContainer/>
+      
+
+
+
+
+
+
+
+
+
+    </>
+  );
 };
 
 export default Browse;
