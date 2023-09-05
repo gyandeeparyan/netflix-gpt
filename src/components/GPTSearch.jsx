@@ -6,11 +6,15 @@ const GPTSearch = () => {
   return (
     <>
       <div>
-        <GPTSearchBar/>
-        <img
+      <GPTSearchBar/>
+      <img
           src={BG_URL}
+         
         />
+       
         <GPTMovieSuggestions/>
+      
+        
       </div>
     </>
   );

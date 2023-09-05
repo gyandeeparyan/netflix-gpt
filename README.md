@@ -15,4 +15,4 @@ Currently, two official plugins are available:
 3 Add Pagination if Possible .
 4 Make Proper Navbar
 5 Make Dropdown Menu
-6 
+6 Ask with open AIKey from user .

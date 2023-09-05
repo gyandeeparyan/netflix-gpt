@@ -2,6 +2,7 @@ import { IMG_CDN_URL } from "../utils/constants"
 
 // eslint-disable-next-line react/prop-types
 const MovieCard = ({posterPath}) => {
+  if (!posterPath) return null;
   return (
     <div className="w-48  mr-4">
 
