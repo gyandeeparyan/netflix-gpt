@@ -1,6 +1,6 @@
 const lang = {
     en: {
-      search: "Search",
+      search: "Ask GPT ",
       gptSearchPlaceholder: "What would you like to watch today?",
     },
     hindi: {
@@ -10,6 +10,10 @@ const lang = {
     spanish: {
       search: "buscar",
       gptSearchPlaceholder: "¿Qué te gustaría ver hoy?",
+    },
+    sanskrit: {
+      search: "अन्वेषण",
+      gptSearchPlaceholder: "अद्य भवन्तः किं द्रष्टुम् इच्छन्ति ?मां पृच्छतु ",
     },
   };
   

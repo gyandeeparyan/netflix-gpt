@@ -7,9 +7,11 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 
-import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
+import { LOGO, MOBILE_LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGPTSearch } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import SearchBar from "./SearchBar";
+import { Search } from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -60,38 +62,61 @@ const Header = () => {
   };
   return (
     <>
-      <div className='absolute bg-gradient-to-b w-screen  flex justify-between from-black px-8 py-2 z-10'>
-        <img className='w-44 ' src={LOGO} alt='netflix-logo' />
-        {user && (
-          <div className='flex mt-3'>
-            {showGPT && (
-              <select
-                onChange={handleLanguage}
-                name=''
-                className='bg-brand-green mr-2 font-semibold text-white h-10 px-4 rounded-lg'>
-                {SUPPORTED_LANGUAGES.map((lang) => (
-                  <option key={lang?.identifier} value={lang?.identifier}>
-                    {" "}
-                    {lang?.name}
-                  </option>
-                ))}
-              </select>
-            )}
+      <div className='absolute hidden md:flex bg-gradient-to-b w-screen flex-col md:flex-row justify-between from-black px-8 py-2 z-10'>
+        <img
+          className='w-44 hidden md:block md:mx-0'
+          src={LOGO}
+          alt='netflix-logo'
+        />
 
-            <button
-              onClick={handleGPTSearch}
-              className='px-2 mt-1 mr-2 h-8 ml-2 py-1 rounded-md  hover:bg-opacity-80 bg-brand-purple text-white font-semibold '>
-              {showGPT ? "Normal Mode" : "GPT Mode"}
-            </button>
-            <img className='h-10 rounded-md' src={user?.photoURL} alt='' />
-            <button
-              onClick={handleSignOut}
-              className='px-2 mt-1 h-8 ml-2 py-1 rounded-md  hover:bg-opacity-80 bg-brand-red text-white font-semibold '>
-              Logout
-            </button>
+        {user && (
+          <div className='flex mt-3 mx-auto justify-between md:mx-0 '>
+            <div>
+              {showGPT && (
+                <select
+                  onChange={handleLanguage}
+                  name=''
+                  className='bg-brand-green mr-2 font-semibold text-white h-9 px-4  rounded-lg'>
+                  {SUPPORTED_LANGUAGES.map((lang) => (
+                    <option key={lang?.identifier} value={lang?.identifier}>
+                      {" "}
+                      {lang?.name}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
+
+            <div>
+              <button
+                onClick={handleGPTSearch}
+                className='px-2 mt-1 mr-2 h-8 ml-2 py-1 rounded-md  hover:bg-opacity-80 bg-brand-purple text-white font-semibold '>
+                {showGPT ? "Normal Mode" : "GPT Mode"}
+              </button>
+            </div>
+
+            <div className='flex'>
+              <img className='h-10 rounded-md' src={user?.photoURL} alt='' />
+              <button
+                onClick={handleSignOut}
+                className='px-2 mt-1 h-8 ml-2 py-1 rounded-md  hover:bg-opacity-80 bg-brand-red text-white font-semibold '>
+                Logout
+              </button>
+            </div>
           </div>
         )}
       </div>
+
+      <div className='sticky top-0 flex z-50 '>
+        <img
+          className=' w-[50px] md:hidden mt-5 ml-2 '
+          src={MOBILE_LOGO}
+          alt='netflix-logo'
+        />
+        <div className='flex ml-3 mt-5'>
+          <SearchBar buttonText={<Search />} />
+        </div>
+       </div>
     </>
   );
 };

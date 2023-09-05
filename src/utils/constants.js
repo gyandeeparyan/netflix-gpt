@@ -18,10 +18,11 @@ export const BG_URL =
 export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
   { identifier: "hindi", name: "Hindi" },
+  { identifier: "sanskrit", name: "Sanskrit" },
   { identifier: "spanish", name: "Spanish" },
 ];
 
-
+export const MOBILE_LOGO ='https://i.ibb.co/mJv0SH4/718-7188480-icon-netflix-logo-png-transparent-png-removebg-preview.png'
 
 
 export const OPENAI_KEY = import.meta.env.VITE_OPENAPI_KEY

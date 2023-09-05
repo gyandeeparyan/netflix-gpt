@@ -10,10 +10,10 @@ if(!movieNames) return null
 
   return <>
     
-  <div className=" p-4 -mt-[600px]">
+  <div className=" p-4 -mt-[695px] md:-mt-[500px]">
 
 
-<div className=" text-white">
+<div className=" text-white font-bold">
         {movieNames.map((movieName, index) => (
           <MovieList
             key={movieName}
