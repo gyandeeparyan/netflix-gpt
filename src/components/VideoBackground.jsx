@@ -19,6 +19,8 @@ const VideoBackground = ({ movieId }) => {
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           allowFullscreen></iframe>
       </div>
+
+      {/* MOBILE BACKGROUND */}
       <div className="md:hidden  ">
       <img className =" w-[90%] border-[1px] border-brand-beige mx-auto rounded-xl"
         src={IMG_CDN_URL+poster_path} alt="movie poster make it dynamic" />

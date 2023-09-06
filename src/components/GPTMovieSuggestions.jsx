@@ -10,7 +10,7 @@ if(!movieNames) return null
 
   return <>
     
-  <div className=" p-4 -mt-[695px] md:-mt-[500px]">
+  <div className=" z-40 p-4 -mt-[0px] md:-mt-[500px]">
 
 
 <div className=" text-white font-bold">

@@ -5,10 +5,11 @@ import { useRef, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { addGPTMovieResult } from "../utils/gptSlice";
 import SearchBar from "./SearchBar";
+import { Search } from "lucide-react";
 const GPTSearchBar = () => {
   const dispatch = useDispatch();
   const selectedLanguage = useSelector((store) => store?.config?.lang);
-  const searchText = useRef(null);
+  const searchText = useRef("");
   const [GPTMovies, setGPTMovies] = useState(null);
 
   const searchMovies = async (movie) => {
@@ -59,7 +60,7 @@ const GPTSearchBar = () => {
   }
 
   const handleSearch = () => {
-    const inputValue = searchText.current.value.trim();
+    const inputValue = searchText?.current?.value?.trim();
     if (inputValue) {
       // Create the search query based on user input
       const searchQuery =
@@ -83,13 +84,21 @@ const GPTSearchBar = () => {
 
   return (
     <>
-      <div className='flex justify-around w-full mt-[180px] md:mt-28 left-0 right-0 absolute mb-9 items-center  z-50  md:w-1/3 ml-1 md:mx-auto '>
-        <SearchBar
-          ref={searchText}
-          placeholder={lang[selectedLanguage].gptSearchPlaceholder}
-          buttonText={lang[selectedLanguage].search}
-          handleSearch={handleSearch}
-        />
+      <div className='flex md:justify-around w-full  ml-[70px] -mt-10 md:mt-28 left-0 right-0 fixed mb-9 items-center  z-50  md:w-1/3  md:mx-auto '>
+      <input
+        ref={searchText}
+        className='flex h-10 w-[280px] md:w-3/4 rounded-3xl shadow-xl dark:bg-stone-800 border-2 dark:border-neutral-600 dark:text-brand-beige border-neutral-400 bg-transparent px-3 py-2 text-sm dark:placeholder:text-gray-200 placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50'
+        type='text'
+        placeholder={lang[selectedLanguage].gptSearchPlaceholder}
+        
+        // onChange={handleSearch}
+      />
+
+      <button
+        onClick={handleSearch}
+        className='bg-brand-red hover:bg-opacity-80 font-semibold rounded-full h-10 text-white ml-2 px-2 py-1'>
+        {<Search/>}
+      </button>
       </div>
     </>
   );

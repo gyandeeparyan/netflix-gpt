@@ -24,9 +24,9 @@ const VideoTitle = ({ title, overview }) => {
         </div>
       </div>
 
-      <div className='md:hidden flex absolute left-[90px] top-[690px]'>
+      <div className='md:hidden flex absolute left-[100px] top-[690px]'>
         <div className='flex justify-between'>
-          <button className='px-4 py-1 md:px-8 md:py-2 rounded-md text-center mx-4  bg-white hover:bg-gray-200 text-black font-semibold text-xl'>
+          <button className='px-4 py-1 md:px-8 md:py-2 rounded-md text-center mr-4 bg-white hover:bg-gray-200 text-black font-semibold text-xl'>
             <Play fill='black' className='inline-flex mb-1' /> Play
           </button>
           <button className='px-4 py-1 md:px-8 md:py-2 rounded-md bg-gray-600 text-white bg-opacity-70 font-semibold text-xl'>

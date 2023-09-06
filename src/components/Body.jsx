@@ -3,6 +3,10 @@ import Browse from "./Browse";
 import Login from "./Login";
 
 import Error from "./Error";
+import UserDetailsPage from "./UserDetailsPage";
+import MovieDetailsPage from "./MovieDetailsPage";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Body = () => {
 
@@ -11,6 +15,7 @@ const Body = () => {
     {
       path: "/",
       element: <Login />,
+      children:[]
     },
     {
       path: "/browse",
@@ -20,6 +25,14 @@ const Body = () => {
       path: "/error",
       element: <Error />,
     },
+    {
+      path: "/browse/:movieId",
+      element: <MovieDetailsPage/>,
+    },
+    {
+      path: "/user",
+      element: <UserDetailsPage/>,
+    },
   ]);
 
 
@@ -27,8 +40,10 @@ const Body = () => {
   return (
     <>
       <RouterProvider router={appRouter}>
+        <Header/>
         <Login />
         <Browse />
+        
       </RouterProvider>
     </>
   );

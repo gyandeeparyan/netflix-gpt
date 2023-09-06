@@ -107,14 +107,16 @@ const Header = () => {
         )}
       </div>
 
+        {/* MOBILE NAV BAR  */}
       <div className='sticky top-0 flex z-50 '>
         <img
           className=' w-[50px] md:hidden mt-5 ml-2 '
           src={MOBILE_LOGO}
           alt='netflix-logo'
         />
-        <div className='flex ml-3 mt-5'>
-          <SearchBar buttonText={<Search />} />
+        <div className='flex ml-3 md:hidden mt-5'>
+
+          {/* {!showGPT && <SearchBar buttonText={<Search />} />} */}
         </div>
        </div>
     </>
