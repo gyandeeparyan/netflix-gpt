@@ -10,8 +10,7 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO, MOBILE_LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGPTSearch } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
-import SearchBar from "./SearchBar";
-import { Search } from "lucide-react";
+
 
 const Header = () => {
   const navigate = useNavigate();

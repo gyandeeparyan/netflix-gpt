@@ -2,18 +2,13 @@ import { BG_URL } from "../utils/constants";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
 import GPTSearchBar from "./GPTsearchBar";
 
-import { useDispatch, useSelector } from "react-redux";
-import { User2 } from "lucide-react";
-import { Home } from "lucide-react";
-import { Rocket } from "lucide-react";
+import {  useSelector } from "react-redux";
 
-import { Languages } from "lucide-react";
-import { toggleGPTSearch } from "../utils/gptSlice";
 
 const GPTSearch = () => {
   // const showGPT = useSelector((store) => store.gpt.showGPTSearch);
   const movieResults = useSelector((store) => store?.gpt?.movieResults);
-  const dispatch = useDispatch();
+ 
 
   return (
     <>

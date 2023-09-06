@@ -5,7 +5,7 @@ import Login from "./Login";
 import Error from "./Error";
 import UserDetailsPage from "./UserDetailsPage";
 import MovieDetailsPage from "./MovieDetailsPage";
-import Footer from "./Footer";
+
 import Header from "./Header";
 
 const Body = () => {

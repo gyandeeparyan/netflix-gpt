@@ -4,7 +4,7 @@ import openai from "../utils/openai";
 import { useRef, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { addGPTMovieResult } from "../utils/gptSlice";
-import SearchBar from "./SearchBar";
+
 import { Search } from "lucide-react";
 const GPTSearchBar = () => {
   const dispatch = useDispatch();

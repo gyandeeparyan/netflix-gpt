@@ -1,11 +1,11 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { API_OPTIONS, IMG_CDN_URL } from "../utils/constants";
-import VideoTitle from "./VideoTitle";
+
 import { User2 } from "lucide-react";
 import { Home } from "lucide-react";
 import { Rocket } from "lucide-react";
-import { Link } from "react-router-dom";
+
 import { Languages } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { toggleGPTSearch } from "../utils/gptSlice";
