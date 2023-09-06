@@ -1,6 +1,6 @@
 import { BG_URL } from "../utils/constants";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
-import GPTSearchBar from "./GPTsearchBar";
+import GPTSearchBar from "./GPTSearchBar";
 
 import {  useSelector } from "react-redux";
 
