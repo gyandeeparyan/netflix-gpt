@@ -3,7 +3,7 @@ import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import HeroContainer from "./HeroContainer";
 import MoviesListContainer from "./MoviesListContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
-import GPTSearch from "./GptSearch";
+import GPTSearch from "./GPTSearch";
 import { useDispatch, useSelector } from "react-redux";
 import { User2 } from "lucide-react";
 import { Home } from "lucide-react";
