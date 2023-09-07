@@ -4,7 +4,7 @@ import openai from "../utils/openai";
 import { useRef, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { addGPTMovieResult } from "../utils/gptSlice";
-
+import { setLoading } from "../utils/gptSlice";
 import { Search } from "lucide-react";
 const GPTSearchBar = () => {
   const dispatch = useDispatch();
@@ -21,15 +21,17 @@ const GPTSearchBar = () => {
         API_OPTIONS
       );
       const json = await data.json();
-
+      
       return json.results;
     } catch (error) {
       console.log(error);
     }
+
   };
 
   async function search(searchInput) {
     try {
+     
       const gptResults = await openai.chat.completions.create({
         messages: [{ role: "user", content: searchInput }],
         model: "gpt-3.5-turbo",
@@ -60,6 +62,7 @@ const GPTSearchBar = () => {
   }
 
   const handleSearch = () => {
+    dispatch(setLoading(true))
     const inputValue = searchText?.current?.value?.trim();
     if (inputValue) {
       // Create the search query based on user input
@@ -71,6 +74,8 @@ const GPTSearchBar = () => {
       // Call the search function with the query
       search(searchQuery);
     }
+
+    dispatch(setLoading(false))
   };
 
   {

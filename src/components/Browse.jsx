@@ -9,20 +9,23 @@ import { User2 } from "lucide-react";
 import { Home } from "lucide-react";
 import { Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Languages } from "lucide-react";
+
 import { toggleGPTSearch } from "../utils/gptSlice";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import Footer from "./Footer";
 
+
 const Browse = () => {
   const showGPT = useSelector((store) => store.gpt.showGPTSearch);
   const dispatch = useDispatch();
+  
 
   useNowPlayingMovies();
   usePopularMovies();
   useTopRatedMovies();
   useUpcomingMovies();
+  
 
   return (
     <>
@@ -38,7 +41,7 @@ const Browse = () => {
               <Home className='my-3' />
             </Link>
 
-            <Languages className='my-3' />
+          
             <Rocket
               fill='yellow'
               color='yellow'
@@ -51,9 +54,10 @@ const Browse = () => {
           </div>
         </>
       ) : (
+        
         <>
           <HeroContainer />
-        <Footer/>
+          <Footer/>
           <MoviesListContainer />
         </>
       )}

@@ -3,12 +3,13 @@ import GPTMovieSuggestions from "./GPTMovieSuggestions";
 import GPTSearchBar from "./GPTSearchBar";
 
 import {  useSelector } from "react-redux";
+import { BrowseShimmer } from "./Shimmer";
 
 
 const GPTSearch = () => {
   // const showGPT = useSelector((store) => store.gpt.showGPTSearch);
   const movieResults = useSelector((store) => store?.gpt?.movieResults);
- 
+  const loading = useSelector((store) => store?.gpt?.loading);
 
   return (
     <>
@@ -41,7 +42,7 @@ const GPTSearch = () => {
           <User2 className='my-3' />
         </div> */}
 
-        <GPTMovieSuggestions />
+      {loading? <BrowseShimmer/> :<GPTMovieSuggestions />}  
       </div>
     </>
   );

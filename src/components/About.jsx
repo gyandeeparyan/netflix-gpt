@@ -2,18 +2,22 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-
 function About() {
+ 
+
   return (<>
 <Navbar/>
+
     <section className='mb-[200px] mt-12 mx-5 flex items-center justify-center'>
+   
       <div className='mx-auto max-w-7xl px-2 lg:px-0'>
         <div className='mx-auto  max-w-3xl md:text-center'>
           <h2 className='text-3xl font-bold leading-tight text-black dark:text-brand-beige sm:text-4xl lg:text-5xl lg:leading-tight'>
             YOU ARE , WHAT YOU WATCH
           </h2>
+        
           <p className='mx-auto p-4 rounded-lg mt-4 max-w-2xl text-left border-2 border-brand-red text-xl text-red-400'>
-            The Netflix-GPT App is a groundbreaking entertainment and
+            Netflix-GPT App is a groundbreaking entertainment and
             recommendation platform that leverages the power of artificial
             intelligence and natural language processing to enhance the Netflix
             streaming experience. This innovative application seamlessly
@@ -34,9 +38,11 @@ function About() {
               MORE PROJECTS
             </button>
           </a>
+         
         </div>
       </div>
     </section>
+   
     <Footer/>
   </>
    

@@ -10,9 +10,10 @@ import {
 import { BG_URL, USER_AVATAR } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { InfinitySpin } from "react-loader-spinner";
 const Login = () => {
   const dispatch = useDispatch();
-  
+
   const [isSignIn, setIsSignIn] = useState(true);
   const [error, setError] = useState(null);
   // const [name, setName] = useState(null);
@@ -21,12 +22,15 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
- 
+  const [loading, setLoading] = useState(false);
+
   const toggleSignIn = () => {
     setIsSignIn(!isSignIn);
   };
 
   const handleValidation = () => {
+    setLoading(true);
+
     if (isSignIn) {
       const errorMessage = validateData(
         email.current.value,
@@ -44,7 +48,6 @@ const Login = () => {
           console.log(user);
           // ...
           //GOTO BROWSE PAGE
-          
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -70,23 +73,22 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-           
-            photoURL:USER_AVATAR ,
+
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
               //Dispatch addUser  again
-              const { uid, email, displayName, photoURL ,} = auth.currentUser;
+              const { uid, email, displayName, photoURL } = auth.currentUser;
               dispatch(
                 addUser({
                   uid: uid,
-                 
+
                   email: email,
                   displayName: displayName,
                   photoURL: photoURL,
                 })
               );
-            
             })
             .catch((error) => {
               // An error occurred
@@ -105,6 +107,7 @@ const Login = () => {
           setError(errorCode + " - " + errorMessage);
           // ..
         });
+      setLoading(false);
     }
   };
 
@@ -112,10 +115,7 @@ const Login = () => {
     <>
       <div className='absolute'>
         <Header />
-        <img
-          src={BG_URL}
-          alt='header-image'
-        />
+        <img src={BG_URL} alt='header-image' />
       </div>
 
       <form
@@ -148,14 +148,16 @@ const Login = () => {
               className='px-4 py-3 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
               placeholder='Password'
             />
-            
 
             <p className='text-red-500 font-semibold mt-2 text-lg'>{error}</p>
 
             <button
-              onClick={handleValidation}
-              className='px-4 py-2 mt-8 rounded-md mb-2 bg-brand-red text-white font-semibold w-full'>
-              {isSignIn ? "Sign In" : "Sign up"}
+              onClick={loading ? null : handleValidation}
+              className={`px-4 py-2 mt-8 rounded-md mb-2 bg-brand-red text-white font-semibold w-full ${
+                loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              disabled={loading}>
+              {loading ?<><p className="ml-20"><InfinitySpin color="white" width='60'/></p></>  : isSignIn ? "Sign In" : "Sign up"}
             </button>
 
             <p
