@@ -4,6 +4,7 @@ import VideoBackground from "./VideoBackground";
 
 const HeroContainer = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
+  const loading =useSelector((store)=>store?.movies?.loading)
   if (!movies) return;
   const mainMovie = movies[2];
   console.log(mainMovie);

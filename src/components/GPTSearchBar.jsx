@@ -21,17 +21,18 @@ const GPTSearchBar = () => {
         API_OPTIONS
       );
       const json = await data.json();
+     
+      return json.results ;
       
-      return json.results;
     } catch (error) {
       console.log(error);
     }
-
+    
   };
 
   async function search(searchInput) {
     try {
-     
+      dispatch(setLoading(true))
       const gptResults = await openai.chat.completions.create({
         messages: [{ role: "user", content: searchInput }],
         model: "gpt-3.5-turbo",
@@ -56,13 +57,15 @@ const GPTSearchBar = () => {
       dispatch(
         addGPTMovieResult({ movieNames: moviesArray, movieResults: results })
       );
+
+      dispatch(setLoading(false))
     } catch (error) {
       console.log(error);
     }
   }
 
   const handleSearch = () => {
-    dispatch(setLoading(true))
+    
     const inputValue = searchText?.current?.value?.trim();
     if (inputValue) {
       // Create the search query based on user input
@@ -75,7 +78,7 @@ const GPTSearchBar = () => {
       search(searchQuery);
     }
 
-    dispatch(setLoading(false))
+    
   };
 
   {
