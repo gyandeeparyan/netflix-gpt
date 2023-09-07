@@ -25,6 +25,6 @@ const gptSlice =createSlice({
     }
 })
 
-export const {toggleGPTSearch .setLoading,addGPTMovieResult}=gptSlice.actions
+export const {toggleGPTSearch ,setLoading,addGPTMovieResult}=gptSlice.actions
 
 export default gptSlice.reducer
