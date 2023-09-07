@@ -18,7 +18,7 @@ export const DesktopBrowseShimmer = () => {
 
 export const BrowseShimmer = () => {
     return (
-      <><div className=" md:hidden ml-[152px]">
+      <><div className=" md:hidden ml-[162px] ">
        <Puff
   height="800"
   width="80"

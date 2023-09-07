@@ -58,7 +58,7 @@ const GPTSearchBar = () => {
         addGPTMovieResult({ movieNames: moviesArray, movieResults: results })
       );
 
-      dispatch(setLoading(false))
+       dispatch(setLoading(false))
     } catch (error) {
       console.log(error);
     }
