@@ -7,6 +7,7 @@ import UserDetailsPage from "./UserDetailsPage";
 import MovieDetailsPage from "./MovieDetailsPage";
 
 import Header from "./Header";
+import About from "./About";
 
 const Body = () => {
 
@@ -32,6 +33,10 @@ const Body = () => {
     {
       path: "/user",
       element: <UserDetailsPage/>,
+    },
+    {
+      path: "/about",
+      element: <About/>,
     },
   ]);
 

@@ -19,8 +19,11 @@ const GPTSearch = () => {
 
         {!movieResults && (
           <div className='h-screen md:hidden'>
-            <p className=' border-[2px] rounded-full ml-[90px] mt-[300px] absolute border-brand-yellow p-2 px-4 text-xl text-brand-yellow '>
+            <p className=' border-[2px] rounded-full ml-[90px] mt-[300px] absolute border-brand-yellow p-1 px-4 text-s text-brand-yellow '>
               Welcome to GPT Mode
+            </p>
+            <p className='  rounded-full ml-[72px] mt-[350px] absolute p-1 px-4 text-s text-brand-yellow '>
+              Ask me anything ,I am a smart movie suggestion model
             </p>
           </div>
         )}

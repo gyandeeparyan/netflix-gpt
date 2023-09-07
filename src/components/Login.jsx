@@ -21,6 +21,7 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+ 
   const toggleSignIn = () => {
     setIsSignIn(!isSignIn);
   };
@@ -69,15 +70,17 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
+           
             photoURL:USER_AVATAR ,
           })
             .then(() => {
               // Profile updated!
               //Dispatch addUser  again
-              const { uid, email, displayName, photoURL } = auth.currentUser;
+              const { uid, email, displayName, photoURL ,} = auth.currentUser;
               dispatch(
                 addUser({
                   uid: uid,
+                 
                   email: email,
                   displayName: displayName,
                   photoURL: photoURL,
@@ -145,6 +148,7 @@ const Login = () => {
               className='px-4 py-3 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
               placeholder='Password'
             />
+            
 
             <p className='text-red-500 font-semibold mt-2 text-lg'>{error}</p>
 
