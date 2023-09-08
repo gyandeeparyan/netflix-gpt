@@ -95,7 +95,7 @@ const GPTSearchBar = () => {
       <div className='flex md:justify-around w-full  ml-[70px] -mt-10 md:mt-28 left-0 right-0 fixed mb-9 items-center  z-50  md:w-1/3  md:mx-auto '>
       <input
         ref={searchText}
-        className='flex h-10 w-[280px] md:w-3/4 rounded-3xl shadow-xl dark:bg-stone-800 border-2 dark:border-neutral-600 dark:text-brand-beige border-neutral-400 bg-transparent px-3 py-2 text-sm dark:placeholder:text-gray-200 placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50'
+        className='flex h-10 w-[280px] md:w-3/4 rounded-3xl shadow-xl dark:bg-stone-800 border-2 dark:border-neutral-600 dark:text-brand-beige border-neutral-400 bg-transparent px-3 py-2 text-sm dark:placeholder:text-gray-400 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50'
         type='text'
         placeholder={lang[selectedLanguage].gptSearchPlaceholder}
         

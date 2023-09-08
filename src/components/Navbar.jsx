@@ -19,9 +19,7 @@ const Navbar = () => {
         />
       </Link>
 
-      <Link to={'/'}>
-        <Home className="mt-5 mr-5" color="white" size={40}/>
-      </Link>
+    
     </div>
      
     </>

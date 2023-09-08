@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { API_OPTIONS, IMG_CDN_URL } from "../utils/constants";
-
+import Footer from "./Footer";
 import { User2 } from "lucide-react";
 import { Home } from "lucide-react";
 import { Rocket } from "lucide-react";
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Languages } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { toggleGPTSearch } from "../utils/gptSlice";
+import Navbar from "./Navbar";
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const dispatch=useDispatch()
@@ -65,7 +66,7 @@ const MovieDetailsPage = () => {
   return (
     <>
       {/* DESKTOP VIEW */}
-      <div className='hidden md:mt-[50px]  md:block'>
+      <div className='hidden md:mt-[10px]  md:block'>
         {/* <div className='flex flex-col'>
           <p className='text-4xl text-center mt-8 font-bold text-teal-200'>
             {movies?.title}
@@ -95,6 +96,7 @@ const MovieDetailsPage = () => {
 
           <p className='text-xl text-left ml-5 mt-8 px-4 py-2 w-[60%] rounded-lg border-[1px] border-teal-200 text-white'>{movies?.status} &nbsp; {movies?.release_date}</p>
         </div>  */}
+        <Navbar/>
         <div className='w-screen  aspect-video hidden md:block'>
           <iframe
             className=''
@@ -106,16 +108,16 @@ const MovieDetailsPage = () => {
             allowFullscreen></iframe>
         </div>
       </div>
-      <div className='absolute hidden md:block top-[20px] h-screen w-screen bg-gradient-to-r from-black'>
+      <div className='absolute hidden md:block top-[75px] h-screen w-screen bg-gradient-to-r from-black'>
         <div className='text-white absolute ml-14 top-[250px] '>
-          <h1 className='font-bold text-6xl'>{movies?.title}</h1>
+          <h1 className='font-semiboldbold text-6xl'>{movies?.title}</h1>
           <p className='mt-2 w-[60%]'>{movies?.overview}</p>
           <div className='flex ml-[-15px] mt-6'>
             {movies?.genres?.map((genre) => {
               return (
                 <p
                   key={genre?.id}
-                  className='rounded-full ml-2 px-4 py-2 bg-brand-purple text-white'>
+                  className='rounded-full ml-2 px-4 py-2 bg-brand-charcoal text-white'>
                   {genre?.name}
                 </p>
               );
@@ -135,12 +137,12 @@ const MovieDetailsPage = () => {
         <p className='text-sm text-left px-4 py-2 w-[90%] ml-5 mt-8  border-[1px] border-teal-200 rounded-lg text-white'>
           {movies?.overview}
         </p>
-        <div className='flex ml-[50px] absolute top-[50px] mt-6'>
+        <div className='flex flex-wrap left-4 absolute top-5  mt-6'>
           {movies?.genres?.map((genre) => {
             return (
               <p
                 key={genre?.id}
-                className='rounded-full ml-2 px-4 py-2 bg-black text-white'>
+                className='rounded-full m-2 px-4 py-2 bg-black text-white'>
                 {genre?.name}
               </p>
             );
@@ -148,21 +150,7 @@ const MovieDetailsPage = () => {
         </div>
       </div>
 
-      <div className='md:hidden flex justify-around bg-brand-coal text-white fixed bottom-[90px]  h-[62px] w-screen z-50 '>
-            <Link to={'/'}>
-            <Home className='my-3' />
-            </Link>
-            
-            <Languages className='my-3' />
-            <Rocket
-              onClick={() => dispatch(toggleGPTSearch())}
-              className='my-3'
-            />
-            <Link to={'/user'}>
-            <User2 className='my-3 active:bg-white' />
-            </Link>
-            
-          </div>
+      <Footer/>
     </>
   );
 };
