@@ -10,7 +10,7 @@ const Footer = () => {
   const showGPT = useSelector((store) => store.gpt.showGPTSearch);
   return (
     <>
-      <div className='md:hidden flex justify-around bg-brand-coal text-white fixed bottom-[90px]  h-[62px] w-screen z-50 '>
+      <div className='md:hidden flex justify-around bg-brand-coal text-white fixed  bottom-[80px] mb-6 h-[52px] w-screen z-60 '>
         <Link to={"/"}>
           <Home className='my-3'  />
         </Link>

@@ -30,7 +30,7 @@ const UserDetailsPage = () => {
  <section className='mb-[200px] mt-12 mx-5 flex items-center justify-center'>
    <div className='mx-auto max-w-7xl px-2 lg:px-0'>
      <div className='mx-auto  max-w-3xl md:text-center'>
-     <h2 className='text-xl font-bold leading-tight  text-black dark:text-brand-beige sm:text-4xl lg:text-2xl lg:leading-tight'>
+     <h2 className='text-xl font-bold leading-tight  text-black dark:text-brand-beige sm:text-4xl lg:text-3xl lg:leading-tight'>
      "YOU BECOME WHAT ,YOU THINK"
        </h2>
       
@@ -41,7 +41,7 @@ const UserDetailsPage = () => {
          
         <br />
          
-         The Netflix-GPT App is a groundbreaking entertainment and
+         The Netflix-GPT is a groundbreaking entertainment and
          recommendation platform that leverages the power of artificial
          intelligence and natural language processing to enhance the Netflix
          streaming experience. This innovative application seamlessly
