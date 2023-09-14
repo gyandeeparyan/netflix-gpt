@@ -1,12 +1,11 @@
 <div align='center'>
 
-<img src=https://i.ibb.co/cwzNN6N/md-home.png alt="logo" width= height= />
+<img src="https://i.ibb.co/KFR5NRY/md-login.png" alt="logo" width="800" height= />
 
 <h1>React.js</h1>
 <p>The Netflix GPT App is an AI-driven platform that enhances the Netflix experience. It leverages OpenAI's GPT-3.5 model to provide personalized content recommendations, interactive conversations, and behind-the-scenes insights to Netflix users. This project is for Netflix enthusiasts seeking a more engaging and customized streaming experience. It empowers users to explore content effortlessly, engage in natural language interactions, and gain a deeper understanding of their favorite shows and movies. Whether you're a seasoned Netflix user or just starting your streaming journey, this app is designed to make your entertainment experience more enjoyable and enriching.</p>
 
 <h4> <a href=https://movies-gpt.netlify.app/>View Demo</a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/issues"> Request Feature </a> </h4>
-
 
 </div>
 
@@ -16,47 +15,46 @@
 - [License](#warning-license)
 - [Contact](#handshake-contact)
 
-
 ## :star2: About the Project
 
 ### :camera: Screenshots
+
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/KFR5NRY/md-login.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/cwzNN6N/md-home.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/LvMTxw2/md-movie-lists.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/YNYTWB0/md-gptpage.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/6B51vPw/sm-login.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/7VsskgN/sm-home.png" alt='image' width='800'/></a> </div>
+<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/6B51vPw/sm-login.png" alt='image' width='400'/></a> </div>
+<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/7VsskgN/sm-home.png" alt='image' width='400'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/vz59TKK/sm-movie-details.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/DgQPRsY/sm-gpt-page.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/L8Bmn2d/sm-user-about-page.png" alt='image' width='800'/></a> </div>
-
-
+<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/DgQPRsY/sm-gpt-page.png" alt='image' width='400'/></a> </div>
+<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/L8Bmn2d/sm-user-about-page.png" alt='image' width='400'/></a> </div>
 
 ### :dart: Features
+
 - GPT-Search
 - Authentication
 - Internationalisation
 - TMDB API
 - Memoisation
 
-
 ### :art: Color Reference
-| Color | Hex |
+
+| Color           | Hex                                                              |
 | --------------- | ---------------------------------------------------------------- |
-| Primary Color | ![#E50914](https://via.placeholder.com/10/E50914?text=+) #E50914 |
+| Primary Color   | ![#E50914](https://via.placeholder.com/10/E50914?text=+) #E50914 |
 | Secondary Color | ![#0f0d0e](https://via.placeholder.com/10/0f0d0e?text=+) #0f0d0e |
-| Accent Color | ![#fcba28](https://via.placeholder.com/10/fcba28?text=+) #fcba28 |
-| Text Color | ![#fff](https://via.placeholder.com/10/fff?text=+) #fff |
+| Accent Color    | ![#fcba28](https://via.placeholder.com/10/fcba28?text=+) #fcba28 |
+| Text Color      | ![#fff](https://via.placeholder.com/10/fff?text=+) #fff          |
 
 ### :key: Environment Variables
+
 To run this project, you will need to add the following environment variables to your .env file
+
 `VITE_OPENAPI_KEY`
 
 `VITE_TMDB_KEY`
 
 `VITE_FIRE_BASE_API_KEY`
-
-
 
 ## :toolbox: Getting Started
 
@@ -66,7 +64,6 @@ To run this project, you will need to add the following environment variables to
 - Install Node Js in your computer<a href="https://nodejs.org/en"> Here</a>
 - Get you OpenAI Platform API key<a href="https://platform.openai.com/"> Here</a>
 
-
 ### :running: Run Locally
 
 Clone the project
@@ -74,27 +71,32 @@ Clone the project
 ```bash
 https://github.com/gyandeeparyan/netflix-gpt
 ```
+
 Go to the project directory
+
 ```bash
 cd netflix-gpt
 ```
+
 Install dependencies
+
 ```bash
 npm i
 ```
+
 Start the server
+
 ```bash
 npm run dev
 ```
 
-
 ### :triangular_flag_on_post: Deployment
 
 To deploy this project run
+
 ```bash
 firebase deploy
 ```
-
 
 ## :wave: Contributing
 
@@ -108,9 +110,7 @@ see `contributing.md` for ways to get started
 
 Please read the [Code of Conduct](https://github.com/gyandeeparyan/netflix-gpt/blob/master/CODE_OF_CONDUCT.md)
 
-## :warning: License
 
-Distributed under the no License. See LICENSE.txt for more information.
 
 ## :handshake: Contact
 
