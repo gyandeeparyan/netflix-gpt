@@ -24,7 +24,7 @@
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/LvMTxw2/md-movie-lists.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/YNYTWB0/md-gptpage.png" alt='image' width='800'/></a> </div>
 <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/6B51vPw/sm-login.png" alt='image' width='400'/></a> 
-<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/7VsskgN/sm-home.png" alt='image' width='400'/></a> </div>
+ <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/7VsskgN/sm-home.png" alt='image' width='400'/></a>
  <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/vz59TKK/sm-movie-details.png" alt='image' width='400'/></a> 
  <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/DgQPRsY/sm-gpt-page.png" alt='image' width='400'/></a> 
  <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/L8Bmn2d/sm-user-about-page.png" alt='image' width='400'/></a> 
