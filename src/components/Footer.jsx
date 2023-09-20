@@ -27,7 +27,7 @@ calculate_device_height()
 
   return (
     <>
-      <div className={ `md:hidden flex justify-around bg-brand-coal text-white fixed  top-[786px] mb-6 h-[52px] w-screen z-50 `}>
+      <div className={ `md:hidden flex justify-around bg-brand-coal text-white fixed  bottom-[70px] mb-6 h-[52px] w-screen z-50 `}>
         <Link to={"/"}>
           <Home className='my-3'  />
         </Link>
