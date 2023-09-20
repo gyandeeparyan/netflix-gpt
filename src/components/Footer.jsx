@@ -5,12 +5,29 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { toggleGPTSearch } from "../utils/gptSlice";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 const Footer = () => {
   const dispatch = useDispatch();
   const showGPT = useSelector((store) => store.gpt.showGPTSearch);
+  const [height,setHeight]=useState()
+
+   //function to calculate the height of device
+   const calculate_device_height = () => {
+    if (window.innerHeight > window.innerWidth) {
+      setHeight(window.innerHeight)
+      console.log(window.innerHeight);
+    } else {
+      setHeight(window.innerWidth)
+    }
+  }
+
+  useEffect(()=>{
+calculate_device_height()
+  },[])
+
   return (
     <>
-      <div className='md:hidden flex justify-around bg-brand-coal text-white fixed  bottom-[80px] mb-6 h-[52px] w-screen z-50 '>
+      <div className={ `md:hidden flex justify-around bg-brand-coal text-white fixed  top-[786px] mb-6 h-[52px] w-screen z-50 `}>
         <Link to={"/"}>
           <Home className='my-3'  />
         </Link>
