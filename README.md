@@ -5,7 +5,7 @@
 <h1>MOVIES GPT</h1>
 <p>The MOVIES-GPT App is an AI-driven platform that enhances the Netflix experience. It leverages OpenAI's GPT-3.5 model to provide personalized content recommendations .This project is for Netflix enthusiasts seeking a more engaging and customized streaming experience. It empowers users to explore content effortlessly, engage in natural language interactions, and gain a deeper understanding of their favorite shows and movies. Whether you're a seasoned Netflix user or just starting your streaming journey, this app is designed to make your entertainment experience more enjoyable and enriching.</p>
 
-<h4> <a href=https://movies-gpt.netlify.app/>View Demo</a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/issues"> Request Feature </a> </h4>
+<h4> <a href=https://movies-gpt.netlify.app/>View Demo</a> <span> · </span> <a href="https://drive.google.com/file/d/1ogK96YYstWNZPLgImskcoeJUQWJ2aB8u/view?usp=sharing"> High Level Design </a> <span>  · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/gyandeeparyan/netflix-gpt/issues"> Request Feature </a> </h4>
 
 </div>
 
