@@ -57,8 +57,9 @@ const Browse = () => {
         
         <>
           <HeroContainer />
-          <Footer/>
+          {/* <Footer/> */}
           <MoviesListContainer />
+          <Footer/>
         </>
       )}
     </>

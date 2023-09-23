@@ -8,6 +8,7 @@ import MovieDetailsPage from "./MovieDetailsPage";
 
 import Header from "./Header";
 import About from "./About";
+import Footer from "./Footer";
 
 const Body = () => {
 
@@ -48,7 +49,8 @@ const Body = () => {
         <Header/>
         <Login />
         <Browse />
-        
+       
+       
       </RouterProvider>
     </>
   );
