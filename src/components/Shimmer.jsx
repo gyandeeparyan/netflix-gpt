@@ -4,13 +4,15 @@ import { Puff} from "react-loader-spinner"
 export const DesktopBrowseShimmer = () => {
   return (
     <><div className=" hidden md:block ml-[152px]">
-     height="80"
+ <Puff
+  height="800"
   width="80"
-  ariaLabel="progress-bar-loading"
+  radius={1}
+  color="#fcba28"
+  ariaLabel="puff-loading"
   wrapperStyle={{}}
-  wrapperClass="progress-bar-wrapper"
-  borderColor = '#F4442E'
-  barColor = '#E50914'
+  wrapperClass=""
+  visible={true}
 />
      </div></>
   )

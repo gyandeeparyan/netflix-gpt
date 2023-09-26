@@ -28,19 +28,8 @@ const GPTSearch = () => {
             </p>
           </div>
         )}
-        <img
-          src={BG_URL}
-          className='md:block  hidden  h-[680px] md:h-screen w-screen object-cover'
-        />
-        {/* <div className='md:hidden flex justify-around bg-brand-coal text-white fixed bottom-[45]  w-screen z-50 '>
-          <Home className='my-3' />
-          <Languages className='my-3' />
-          <Rocket
-            onClick={() => dispatch(toggleGPTSearch())}
-            className='my-3'
-          />
-          <User2 className='my-3' />
-        </div> */}
+     
+        
 
       {loading? <BrowseShimmer/> :<GPTMovieSuggestions />}  
       </div>

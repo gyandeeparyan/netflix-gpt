@@ -64,7 +64,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className='absolute hidden md:flex bg-gradient-to-b w-screen flex-col md:flex-row justify-between from-black px-8 py-2 z-10'>
+      <div className=' fixed hidden md:flex bg-gradient-to-b w-screen flex-col md:flex-row justify-between from-black px-8 py-2 z-50'>
         <img
           className='w-44 hidden md:block md:mx-0'
           src={LOGO}
