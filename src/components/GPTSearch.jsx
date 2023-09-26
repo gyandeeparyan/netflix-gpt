@@ -3,7 +3,7 @@ import GPTMovieSuggestions from "./GPTMovieSuggestions";
 import GPTSearchBar from "./GPTSearchBar";
 
 import {  useSelector } from "react-redux";
-import { BrowseShimmer } from "./Shimmer";
+import { BrowseShimmer, DesktopBrowseShimmer } from "./Shimmer";
 
 
 const GPTSearch = () => {
@@ -29,10 +29,16 @@ const GPTSearch = () => {
           </div>
         )}
      
-        
+        <div className="md:block hidden">
+        {loading? <DesktopBrowseShimmer/> :<GPTMovieSuggestions />}  
+   
+        </div>
+  <div className="md:hidden">
+  {loading? <BrowseShimmer/> :<GPTMovieSuggestions />}  
+   
+  </div>
 
-      {loading? <BrowseShimmer/> :<GPTMovieSuggestions />}  
-      </div>
+       </div>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Puff} from "react-loader-spinner"
 
 export const DesktopBrowseShimmer = () => {
   return (
-    <><div className=" hidden md:block ml-[152px]">
+    <><div className=" hidden md:block ml-[600px]">
  <Puff
   height="800"
   width="80"
@@ -14,7 +14,8 @@ export const DesktopBrowseShimmer = () => {
   wrapperClass=""
   visible={true}
 />
-     </div></>
+<br />
+   </div></>
   )
 }
 
