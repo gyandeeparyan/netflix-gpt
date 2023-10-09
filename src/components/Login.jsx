@@ -115,7 +115,7 @@ const Login = () => {
     <>
       <div className='absolute'>
         <Header />
-        <img src={BG_URL}  className="w-full h-full" alt='header-image' />
+        <img fetchpriority="high" src={BG_URL}  className="w-full h-full hidden md:block" alt='header-image' />
       </div>
 
       <form
