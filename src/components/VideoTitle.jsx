@@ -31,7 +31,7 @@ const VideoTitle = ({ title, overview }) => {
         </div>
       </div>
 
-      <div className='md:hidden flex absolute left-[100px] top-[690px]'>
+      <div className='md:hidden flex absolute left-[100px] top-[590px]'>
         <div className='flex justify-between'>
         <Link to={"/browse/"+id}>
           <button className='px-4 py-1 md:px-8 md:py-2 rounded-md text-center mr-4 bg-white hover:bg-gray-200 text-black font-semibold text-xl'>

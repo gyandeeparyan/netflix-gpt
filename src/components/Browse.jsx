@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { toggleGPTSearch } from "../utils/gptSlice";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
+import { setLoading } from "../utils/moviesSlice";
 import Footer from "./Footer";
 
 
@@ -25,9 +26,10 @@ const Browse = () => {
   usePopularMovies();
   useTopRatedMovies();
   useUpcomingMovies();
-  
+
 
   return (
+
     <>
       <Header />
       {showGPT ? (
