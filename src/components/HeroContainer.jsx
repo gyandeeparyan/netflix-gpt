@@ -16,7 +16,7 @@ const HeroContainer = () => {
     loading?<HomeShimmer/>:
     
     <>
-    <div className="pt-[10%] md:pt-0 bg-black">
+    <div className="pt-[10%] md:py-0 md:-mt-24 bg-black">
      <VideoTitle title={original_title} overview={overview}/>
       <VideoBackground movieId={id}/>
     </div>

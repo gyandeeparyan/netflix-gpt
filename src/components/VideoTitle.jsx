@@ -7,7 +7,7 @@ const VideoTitle = ({ title, overview }) => {
   const id= useSelector((store)=>store?.movies?.nowPlayingMovies[2]?.id)
   return (
     <>
-      <div className='pt-[12%] hidden md:block px-6 md:px-20 w-screen aspect-video   absolute bg-gradient-to-r from-black '>
+      <div className='pt-[12%] mt-32 hidden md:block px-6 md:px-20 w-screen aspect-video   absolute bg-gradient-to-r from-black '>
         <h1 className='md:text-6xl text-5xl mb-3 font-semibold hidden md:block text-white '>
           {title}
         </h1>

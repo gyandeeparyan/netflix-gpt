@@ -96,7 +96,7 @@ const Header = () => {
               )}
             </div>
 
-            <div>
+            <div title="GPT Mode">
               <button
                 onClick={handleGPTSearch}
                 className='px-3 w-[43px] mr-2  ml-2 py-3  hover:bg-opacity-80 bg-brand-charcoal rounded-full text-white font-semibold '>
