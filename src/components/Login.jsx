@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { BG_URL, USER_AVATAR } from "../utils/constants";
+import { BG_URL, SIGN_UP_IMG, USER_AVATAR } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { InfinitySpin } from "react-loader-spinner";
@@ -114,15 +114,21 @@ const Login = () => {
   return (
     <>
       <div className='absolute'>
-        <Header />
-        <img fetchpriority="high" src={BG_URL}  className="w-full h-full hidden md:block" alt='header-image' />
-      </div>
+      
+      <Header />
+       
+       </div>
+       <div className="md:flex absolute z-50  md:mt-24">
+       <div className="w-[35%] hidden md:block ">
+        <img fetchpriority="high" src={SIGN_UP_IMG}  className="max-w-sm my-9 mx-auto h-auto " alt='header-image' />
 
-      <form
+        </div>
+        <div className="md:w-1/2 md:h-full md:px-4  ">
+        <form
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className='absolute mx-auto md:my-[150px] right-0 left-0 md:rounded-xl text-white bg-black md:opacity-90  p-12 w-100  md:h-[85%] md:w-[32%]'>
+        className='mx-auto  md:  md:rounded-xl text-white bg-black md:opacity-90  p-12 w-100  md:h-[85%] md:w-[40%]'>
         <div className='container flex items-center justify-center h-screen md:h-[95%]'>
           <div className='flex flex-col items-start w-full md:w-screen '>
             <p className='text-white font-semibold text-3xl mb-6'>
@@ -176,6 +182,10 @@ const Login = () => {
           </div>
         </div>
       </form>
+        </div>
+       </div>
+      
+     
     </>
   );
 };

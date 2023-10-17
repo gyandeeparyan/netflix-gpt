@@ -7,7 +7,7 @@ const gptSlice =createSlice({
         gptMovies:null,
         movieResults:null,
         movieNames:null,
-        loading:false,
+        loading:true,
 
     },
     reducers:{

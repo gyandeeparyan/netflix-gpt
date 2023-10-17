@@ -21,11 +21,11 @@ export const DesktopBrowseShimmer = () => {
 
 export const BrowseShimmer = () => {
     return (
-      <><div className=" md:hidden ml-[162px] ">
+      <><div className="  ml-[85px] absolute z-50 -mt-[1010px] ">
        <Puff
-  height="800"
+  height="100"
   width="80"
-  radius={1}
+  radius={2}
   color="#fcba28"
   ariaLabel="puff-loading"
   wrapperStyle={{}}
