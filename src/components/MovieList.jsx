@@ -7,7 +7,7 @@ const MovieList = ({ title, movies }) => {
     loading? null :
     <>
     
-      <div className='p-6 z-50'>
+      <div className='p-6 z-40'>
         <h1 className='md:text-3xl text-2xl font-bold py-6'>{title}</h1>
         <div className='flex overflow-x-scroll scrollbar-none scrollbar-hide'>
           <div className='flex  '>

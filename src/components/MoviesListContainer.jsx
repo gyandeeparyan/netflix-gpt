@@ -7,10 +7,10 @@ const MoviesListContainer = () => {
     <>
       <div className='bg-black text-white '>
         <div className=' -mt-[0px] md:-mt-48 relative z-20'>
-          <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
-          <MovieList title={"Popular"} movies={movies.popularMovies} />
-          <MovieList title={"Upcoming Movies"} movies={movies.upcomingMovies} />
-          <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
+          <MovieList title={"now playing"} movies={movies.nowPlayingMovies} />
+          <MovieList title={"popular"} movies={movies.popularMovies} />
+          <MovieList title={"upcoming movies"} movies={movies.upcomingMovies} />
+          <MovieList title={"top rated"} movies={movies.topRatedMovies} />
         </div>
       </div>
     </>

@@ -20,8 +20,8 @@ const Login = () => {
   // const [email, setEmail] = useState(null);
   // const [password, setPassword] = useState(null);
   const name = useRef(null);
-  const email = useRef(null);
-  const password = useRef(null);
+  const email = useRef('test@netflix.com');
+  const password = useRef('123456789');
   const [loading, setLoading] = useState(false);
 
   const toggleSignIn = () => {
@@ -128,7 +128,7 @@ const Login = () => {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className='mx-auto  md:mx-4  md:rounded-xl text-white bg-black md:opacity-90  p-12 w-100  md:h-[85%] md:w-[40%]'>
+        className='mx-auto  md:mx-4  md:rounded-xl text-white bg-black md:opacity-90  p-12 w-100  md:h-[85%] md:w-[40%] ' >
         <div className='container flex items-center justify-center h-screen md:h-[95%]'>
           <div className='flex flex-col items-start w-full md:w-screen '>
             <p className='text-white font-semibold text-3xl mb-6'>
@@ -144,15 +144,17 @@ const Login = () => {
             )}
             <input
               ref={email}
+              defaultValue={"test@netflix.com"}
               type='text'
               className='px-4 py-3 mb-4 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
-              placeholder='Email or phone number'
+              placeholder='test@netflix.com'
             />
             <input
               ref={password}
               type='password'
+              defaultValue={'123456789'}
               className='px-4 py-3 w-full bg-neutral-800 focus:bg-neutral-800 rounded-md'
-              placeholder='Password'
+              placeholder='123456789'
             />
 
             <p className='text-red-500 font-semibold mt-2 text-lg'>{error}</p>
