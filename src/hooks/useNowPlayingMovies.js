@@ -1,4 +1,4 @@
-import { API_OPTIONS } from "./../utils/constants";
+import { API_OPTIONS } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingMovies } from "../utils/moviesSlice";
@@ -21,6 +21,7 @@ const useNowPlayingMovies=()=>{
        
       } catch (error) {
         console.log(error);
+       console.log(error);
       }
      
     };

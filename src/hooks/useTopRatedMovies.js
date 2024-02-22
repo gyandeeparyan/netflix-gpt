@@ -11,13 +11,17 @@ const useTopRatedMovies = () => {
   const topRatedMovies = useSelector((store) => store.movies.topRatedMovies);
 
   const getTopRatedMovies = async () => {
-    const data = await fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?page=1",
-      API_OPTIONS
-    );
-    const json = await data.json();
-    dispatch(addTopRatedMovies(json.results));
-  };
+    try {
+      const data = await fetch(
+        "https://api.themoviedb.org/3/movie/top_rated?page=1",
+        API_OPTIONS
+      );
+      const json = await data.json();
+      dispatch(addTopRatedMovies(json.results));
+    ;
+    } catch (error) {
+      <h1>error on tmdb server</h1>
+    }
 
   useEffect(() => {
     !topRatedMovies && getTopRatedMovies();
