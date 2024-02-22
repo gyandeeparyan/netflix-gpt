@@ -18,14 +18,17 @@ const useTopRatedMovies = () => {
       );
       const json = await data.json();
       dispatch(addTopRatedMovies(json.results));
-    ;
+    
     } catch (error) {
-      <h1>error on tmdb server</h1>
+      console.log(error);
     }
 
-  useEffect(() => {
-    !topRatedMovies && getTopRatedMovies();
-  }, []);
+  
 };
+
+useEffect(() => {
+  !topRatedMovies && getTopRatedMovies();
+}, []);
+}
 
 export default useTopRatedMovies;

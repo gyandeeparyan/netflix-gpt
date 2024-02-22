@@ -7,9 +7,9 @@ import { setLoading } from "../utils/moviesSlice";
 const usePopularMovies = () => {
   // Fetch Data from TMDB API and update store
   const dispatch = useDispatch();
-  
-
   const popularMovies = useSelector((store) => store.movies.popularMovies);
+
+  
 
   const getPopularMovies = async () => {
     try {
@@ -22,12 +22,18 @@ const usePopularMovies = () => {
       dispatch(setLoading())
     }
      catch (error) {
-     
+     console.log(error);
     }
+  
 
-  useEffect(() => {
-    !popularMovies && getPopularMovies();
-  }, []);
-};
 
-export default usePopularMovies
+ 
+
+
+} 
+
+useEffect(() => {
+  !popularMovies && getPopularMovies();
+}, []);}
+
+export default usePopularMovies;
