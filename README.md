@@ -20,19 +20,11 @@
 
 ### :camera: Screenshots
 
-<div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/KFR5NRY/md-login.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/cwzNN6N/md-home.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/LvMTxw2/md-movie-lists.png" alt='image' width='800'/></a> </div>
 <div align="center"> <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/YNYTWB0/md-gptpage.png" alt='image' width='800'/></a> </div>
 <div >
 
-<div  align="center"> 
-<a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/6B51vPw/sm-login.png" alt='image' width='80'/></a> 
- <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/7VsskgN/sm-home.png" alt='image' width='80'/></a>
- <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/vz59TKK/sm-movie-details.png" alt='image' width='80'/></a> 
- <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/DgQPRsY/sm-gpt-page.png" alt='image' width='80'/></a> 
- <a href="https://movies-gpt.netlify.app/"><img src="https://i.ibb.co/L8Bmn2d/sm-user-about-page.png" alt='image' width='80'/></a>
-</div>
 
 
 ### :dart: Features
