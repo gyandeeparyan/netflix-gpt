@@ -10,6 +10,8 @@ const GPTSearchBar = () => {
   const dispatch = useDispatch();
   const selectedLanguage = useSelector((store) => store?.config?.lang);
   const searchText = useRef("");
+  const [fetchCount, setFetchCount] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   const [GPTMovies, setGPTMovies] = useState(null);
 
   const searchMovies = async (movie) => {
@@ -31,7 +33,15 @@ const GPTSearchBar = () => {
   };
 
   async function search(searchInput) {
+    if (fetchCount >= 2) {
+      setShowModal(true);
+     
+
+      return;
+    }
     try {
+      setFetchCount((prev) => prev + 1);
+     
       dispatch(setLoading(true))
       const gptResults = await openai.chat.completions.create({
         messages: [{ role: "user", content: searchInput }],
@@ -97,8 +107,10 @@ const GPTSearchBar = () => {
 
       <button
         onClick={handleSearch}
+        disabled={showModal}
         className=' hover:bg-opacity-80 font-semibold rounded-full  text-white ml-2 px-1 py-1'>
-        {<Search color="red" />}
+        {showModal?<div className="rounded-full px-4 py-2  bg-red-500"><p>Limited</p></div>:
+        <Search color="red" />}
       </button>
       </div>
     </>

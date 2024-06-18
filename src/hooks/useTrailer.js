@@ -30,6 +30,7 @@ const useTrailer = (movieId) => {
       dispatch(addTrailerVideo(trailer));
     } catch (error) {
       console.log(error);
+      
     }
   };
 };
